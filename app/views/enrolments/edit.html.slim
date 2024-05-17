@@ -1,0 +1,13 @@
+h1 Edit
+
+= form_for @enrolment do |f|
+  = render partial: 'answer'
+  //pre = JSON.pretty_generate(@enrolment.answer)
+  //hr
+  //pre = JSON.pretty_generate(@enrolment.messages)
+  .mb-3
+    = f.label :user_prompt, class: 'form-label'
+  .mb-3 
+    = f.text_field :user_prompt, class: 'form-control'
+  .mb-3 
+    = f.submit 'Talk', class: 'btn btn-primary'
